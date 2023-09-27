@@ -1,11 +1,11 @@
 import subprocess
 import yara
 
-yara_rules_directory = '/home/mahmud/Desktop/php_test/rules/main.yar'
+yara_rules_directory = '/home/mahmud/Desktop/php_test/rules/main.yar' #Location of main.yar
 
 yara_rules = yara.compile(yara_rules_directory,error_on_warning = False)
 
-yara_rules_save = yara_rules.save('/home/mahmud/Desktop/php_test/rules/compiled')
+#yara_rules_save = yara_rules.save('/home/mahmud/Desktop/php_test/rules/compiled')
 
 #Input Dir
 files_dir = input("Enter file directory: ")
