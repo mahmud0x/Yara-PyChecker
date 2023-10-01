@@ -1,4 +1,5 @@
 include "iddqd.yar"
+include "main.yar"
 include "webshell_detection.yar"
 include "WShell_APT_Laudanum.yar"
 include "WShell_ASPXSpy.yar"

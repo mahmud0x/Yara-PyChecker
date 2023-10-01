@@ -1,9 +1,11 @@
 import subprocess
 import yara
+import os
 
-yara_rules_directory = '/home/mahmud/Desktop/php_test/rules/main.yar' #Location of main.yar
+os.chdir('./rules')
+yara_rules_file = 'main.yar' #Location of main.yar
 
-yara_rules = yara.compile(yara_rules_directory,error_on_warning = False)
+yara_rules = yara.compile(yara_rules_file,error_on_warning = False)
 
 #yara_rules_save = yara_rules.save('/home/mahmud/Desktop/php_test/rules/compiled')
 
@@ -23,6 +25,5 @@ for scan_filepath in scan_file_list:
         print(scan_filepath, end="\n")
         print("Suspicious \n")
         print(matches)
-print("Done")
-#matches = yara_rules.match('/home/mahmud/Desktop/php_test/shell-backdoor-list/shell/php/b374k.php')
-#print(matches)
+print("Done!")
+
